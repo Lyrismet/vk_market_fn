@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+button::-moz-focus-inner{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  color: inherit;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

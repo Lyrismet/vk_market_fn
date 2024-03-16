@@ -1,6 +1,8 @@
 import '@vkontakte/vkui/dist/vkui.css';
 import './App.css'
 import {AppRoot, Group, Panel, PanelHeader, SplitCol, SplitLayout, usePlatform, View} from "@vkontakte/vkui";
+import Cart from "./components/Cart.tsx";
+import ProductList from "./components/ProductList.tsx";
 
 function App() {
     const platform = usePlatform();
@@ -14,17 +16,19 @@ function App() {
                         <Panel id="main">
                             <PanelHeader>VKUI. Market </PanelHeader>
                             <SplitLayout>
-                                <SplitCol>
+                                <SplitCol style={{flex:3}}>
                                     <View activePanel="1">
                                         <Panel id="1">
-                                            <Group>3</Group>
+                                            <Group>
+                                                <ProductList/>
+                                            </Group>
                                         </Panel>
                                     </View>
                                 </SplitCol>
-                                <SplitCol>
+                                <SplitCol style={{flex:1}}>
                                     <View activePanel="2">
                                         <Panel id="2">
-                                            <Group>1</Group>
+                                            <Cart/>
                                         </Panel>
                                     </View>
                                 </SplitCol>
